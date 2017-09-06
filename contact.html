@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Heroic Features - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+
+    <!-- Skin CSS -->
+    <link href="skin/css/skin.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        .col-md-4 control-labels{
+            font-weight:bold;
+            float:left;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="home.html">
+                    <img class="home_logo" src="skin/img/logo_header.png" alt="" />
+                    <span id="appTitle" class="home_title">Start Bootstrap</span>
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <span id="menuNav">
+                </span>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Jumbotron Header
+        <header class="jumbotron hero-spacer">
+            <h1><div id="compassHeading">About Us</div></h1>
+            <p>Compass heading shown above.</p>
+            <p><a class="btn btn-primary btn-large">Call to action!</a>
+            </p>
+        </header>
+
+        <hr>
+        -->
+        <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Message Us</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                
+
+                        <form class="well form-horizontal" action=" " method="post" id="contact_form">
+                            <fieldset>
+
+                                <!-- Form Name <legend></legend> -->
+                                
+
+                                <!-- Text input-->
+
+                                <div class="form-group">
+                                    <!--<label class="col-md-4 control-labels">First Name</label>-->
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                            <input name="first_name" placeholder="Your Name" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Text input
+                                <div class="form-group">
+                                    <label class="col-md-4 control-labels">Last Name</label>
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                            <input name="last_name" placeholder="Last Name" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                -->
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <!--<label class="col-md-4 control-labels">E-Mail</label>-->
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                            <input name="email" placeholder="E-Mail Address" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Text input-->
+
+                                <div class="form-group">
+                                    <!--<label class="col-md-4 control-labels">Phone #</label>-->
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                            <input name="phone" placeholder="Phone Number" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+
+                                <div class="form-group">
+                                    <!--<label class="col-md-4 control-labels">Address</label>-->
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                            <input name="address" placeholder="Address" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+
+                                <div class="form-group">
+                                    <!--<label class="col-md-4 control-labels">City, State</label>-->
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                            <input name="city" placeholder="city" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+
+                                <div class="form-group">
+                                    <!--<label class="col-md-4 control-labels">Zip Code</label>-->
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                            <input name="zip" placeholder="Zip Code" class="form-control" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Text area -->
+
+                                <div class="form-group">
+                                    <!--<label class="col-md-4 control-labels">Project Description</label>-->
+                                    <div class="col-md-4 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                            <textarea class="form-control" name="comment" placeholder="Message"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Success message -->
+                                <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+                                <!-- Button -->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-labels"></label>
+                                    <div class="col-md-4">
+                                        <button type="submit" class="btn btn-primary">Send <span class="glyphicon glyphicon-send"></span></button>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+                   <!-- /.container -->
+
+                </div>
+            </div>
+
+        
+        </div>
+        <!-- /.row -->
+
+        <!--<hr>-->
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p id="copyrightText"></p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!--SCRIPTS-->
+
+    <!-- Cordova JS -->
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Cordova app code -->
+    <script src="js/app.js"></script>
+
+    <!--Skin App-->
+    <script src="skin/js/skin.js"></script>
+
+</body>
+
+</html>
