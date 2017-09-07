@@ -146,7 +146,7 @@ var menu_items = [
         link:"choir.html"
     },
     {
-        iconImage: "skin/img/icons/icon6.svg",
+        iconImage: "skin/img/icons/icon8.svg",
         title: "",
         link:""
     },
