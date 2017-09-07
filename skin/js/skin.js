@@ -143,58 +143,18 @@ var menu_items = [
     {
         iconImage: "skin/img/icons/icon7.svg",
         title: "St. Stephens Choir",
-        link:"http://carolantic.com/press-releases.html"
+        link:"choir.html"
     },
     {
         iconImage: "skin/img/icons/icon6.svg",
         title: "",
-        link:"brokers.html"
+        link:""
     },
     {
         iconImage: "skin/img/icons/icon6.svg",
         title: "",
-        link: "images.html?galNum=9"
-    }/*,
-    {
-        iconImage: "skin/img/icons/video.svg",
-        title: "32nd Annual Videos",
-        link:"videos.html"
-    },
-    {
-        iconImage: "skin/img/icons/forecast.svg",
-        title: "32nd Annual Forecast", 
-        link: "images.html?galNum=0"
-    },
-    {
-        iconImage: "skin/img/icons/presentation.svg",
-        title: "32nd Annual Presentation",
-        link:"images.html?galNum=6"
-    },
-    {
-        iconImage: "skin/img/icons/office.svg",
-        title: "Office<br>",
-        link:"images.html?galNum=1"
-    },
-    {
-        iconImage: "skin/img/icons/multipurpose.svg",
-        title: "Multipurpose",
-        link:"images.html?galNum=2"
-    },
-    {
-        iconImage: "skin/img/icons/retail.svg",
-        title: "Retail", 
-        link: "images.html?galNum=3"
-    },
-    {
-        iconImage: "skin/img/icons/residential.svg",
-        title: "Residential", 
-        link: "images.html?galNum=4"
-    },
-    {
-        iconImage: "skin/img/icons/hotel.svg",
-        title: "Hotel", 
-        link: "images.html?galNum=5"
-    }*/
+        link: ""
+    }
 ];
 
 
