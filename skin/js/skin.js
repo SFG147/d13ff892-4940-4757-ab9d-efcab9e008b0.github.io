@@ -133,7 +133,7 @@ var menu_items = [
     {
         iconImage: "skin/img/icons/icon4.svg",
         title: "Activity",
-        link: "http://carolantic.com/featured-properties.html"
+        link: "activity.html"
     },
     {
         iconImage: "skin/img/icons/icon5.svg",
@@ -141,8 +141,8 @@ var menu_items = [
         link: "images.html?galNum=9"
     },
     {
-        iconImage: "skin/img/icons/icon6.svg",
-        title: "",
+        iconImage: "skin/img/icons/icon7.svg",
+        title: "St. Stephens Choir",
         link:"http://carolantic.com/press-releases.html"
     },
     {
