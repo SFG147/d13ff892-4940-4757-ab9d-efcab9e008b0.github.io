@@ -121,12 +121,12 @@ var menu_items = [
         link: "news.html"
     },
     {
-        iconImage: "skin/img/icons/icon2.svg",
+        iconImage: "skin/img/icons/icon3.svg",
         title: "Sunday School Lesson",
         link: "lessons.html"
     },
     {
-        iconImage: "skin/img/icons/icon3.svg",
+        iconImage: "skin/img/icons/icon2.svg",
         title: "Birthdays",
         link: "birthdays.html"
     },
