@@ -1,0 +1,319 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+
+<style> 
+p,h1,h3,input,button {
+	font-family:Helvetica;
+	font-size:40px;
+	color: #555555;
+}
+h2{
+	font-family:Helvetica;
+	font-size:40px;
+	color: #333;
+}
+
+#result {
+    padding: 20px 20px;
+    margin: 5px 5px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 6px;
+  background-color: #00BDED;
+  font-weight:bold;
+}
+
+button {
+	
+    padding: 20px 20px;
+    margin: 5px 5px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 6px;
+	background-color: #36DC91;
+	font-weight:bold;
+	color:#FFFFFF; 
+}
+
+button:hover {
+	background-color: #00A373;
+}
+
+/* hide input */
+input.radio:empty {
+	display:none;
+}
+
+/* style label */
+input.radio:empty ~ label {
+	position: relative;
+	float: left;
+	line-height: 2.5em;
+	text-indent: 3.25em;
+	margin-top: 0.5em;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+input.radio:empty ~ label:before {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 2.5em;
+	background: #D1D3D4;
+	border-radius: 10px 0 0 10px;
+}
+
+/* toggle hover */
+input.radio:hover:not(:checked) ~ label:before {
+	content:'\2714';
+	text-indent: .9em;
+	color: #C2C2C2;
+}
+
+input.radio:hover:not(:checked) ~ label {
+	color: #888;
+}
+
+/* toggle on */
+input.radio:checked ~ label:before {
+	content:'\2714';
+	text-indent: .9em;
+	color: #FFFFFF;
+	background-color: #00BDED;
+}
+
+input.radio:checked ~ label {
+	color: #777;
+}
+
+/* radio focus */
+input.radio:focus ~ label:before {
+	box-shadow: 0 0 0 3px #999;
+}
+
+label {
+  	/*width: 200px;*/
+  	border-radius: 10px;
+  	border: 1px solid #D1D3D4;
+	padding-right:40px;
+	margin-left:40px;
+	font-family:Helvetica;
+	font-size:40px;
+	color: #555555;
+}
+
+.prompt {
+	color:#FFFFFF;
+}
+
+</style>
+
+
+
+
+
+
+
+<!--  -----------------------------------------------
+Body
+------------------------------------------------  -->
+
+<body id="body" style="padding:10%" onLoad="init()">
+
+
+<div id="activity">
+
+
+<h2>Exercise</h2>
+<p id="question"><br/>
+
+<div style="display:inline-table; width:100%">
+<div class="choice">
+<input type="radio" name="radio" id="radio1" class="radio"/>
+<label for="radio1" id="text1">First Option</label>
+</div>
+
+<div class="choice">
+<input type="radio" name="radio" id="radio2" class="radio"/>
+<label for="radio2" id="text2">Second Option</label>
+</div>
+</div>
+
+</p>
+
+<p align="right">
+<button onclick="checkAnswer()">SUBMIT</button></p>
+</div>
+
+<div id="prompt">
+<h2 class="prompt" id="prompt-header">Hey!</h2>
+<p class="prompt" id="prompt-message"></p>
+<button onClick="PromptButton()">OK</button>
+</div>
+
+
+
+
+
+
+
+<!--  -----------------------------------------------
+Javascript
+------------------------------------------------  -->
+<script>
+var answers =["True","False"];
+var blanks = ["radio1","radio2"];
+var texts = ["text1","text2"];
+var score = 0;
+var currQues = 0;
+var currAnsw = "";
+var questions = [
+		{
+		ques: "Samsung is the greatest thing to ever happen to the phone world.",
+		choices: ["True","False"],
+		ans: "radio2"
+		},
+		{
+		ques: "One can argue that most of the large mobile phone companies aren't innovators. They leverage the success of smaller manufacturers.",
+		choices: ["True","False"],
+		ans: "radio1"
+		},
+		{
+		ques: "Verizon has the biggest selection of phones out of all carriers.",
+		choices: ["True","False"],
+		ans: "radio2"
+		},
+		{
+		ques: "Anything without an Apple logo is great!",
+		choices: ["True","False"],
+		ans: "radio2"
+		},
+		{
+		ques: "There are less than 5 types of phones.",
+		choices: ["True","False"],
+		ans: "radio2"
+		},
+		{
+		ques: "Only people with iPhones can video chat.",
+		choices: ["True","False"],
+		ans: "radio2"
+		},
+		{
+		ques: "Samsung made the android platform.",
+		choices: ["True","False"],
+		ans: "radio2"
+		},
+		{
+		ques: "Apple created the iPhone name.",
+		choices: ["True","False"],
+		ans: "radio2"
+		},
+		{
+		ques: "Huawei is a phone company that has way more venues than anyone else.",
+		choices: ["True","False"],
+		ans: "radio1"
+		},
+		{
+		ques: "The Pixel is first phone Google waterproofing.",
+		choices: ["True","False"],
+		ans: "radio2"
+		}
+];
+
+function init(){
+	SetUpQuestion();
+	ShowElement("prompt",false);
+}
+
+function SetUpQuestion(){
+	//Get the current question.
+	var cQuestion = questions[currQues];
+	//Set the question. 
+	document.getElementById("question").innerHTML = cQuestion.ques;
+	//Set the choices.
+	for(i=0; i<cQuestion.choices.length; i++){
+		document.getElementById(texts[i]).innerHTML = cQuestion.choices[i];
+		document.getElementById(blanks[i]).checked = false;
+	}
+	//Set the current answer.
+	currAnsw = cQuestion.ans;
+}
+
+function checkAnswer() {
+	var correct = false;
+	var output = "";
+	if(document.getElementById(currAnsw).checked == true){
+		correct = true;
+	}
+	
+	if(correct){
+		ShowPrompt("Great job!", "You selected the correct answer!","#00617a");
+		if(currQues+1 > questions.length-1){
+			currQues = 0;
+			if(score>10){
+				ShowPrompt("Warning!", "You may have a woolly back. Please be careful not to allow yourself to be herded by your favorite brand. It's ok to love a brand, however, let opinions follow facts. If you are a fan of a brand, well at least you admit it. :)", "#ff0000");
+			}else if(score>5 && score<10){
+				ShowPrompt("Caution", "Congrats, I don't think you have a woolly back or green antennas. If any of these questions peaked your interest it's a good idea to research them and see what else we can find.", "#e6a801");
+			}else if(score<3 && score>0){
+				ShowPrompt("Great Job!", "Your answers were above average. Most people do not know (guess) the answers to these statements. You got 80% of these correct!", "#00883d");
+			}else if(score==0){
+				ShowPrompt("Super Rare!", "Oh wow. Have we come across such great intellect!? I cannot even accuse you of guessing. If you dared to push those buttons and achieved this score, hats off to you!", "#00a39d");
+			}
+		}else{
+			currQues++;
+		}
+		SetUpQuestion();
+	}else{
+	   ShowPrompt("Whoops!", "Please double check your answer.", "#00617a");
+	   score++;
+	}
+}
+
+
+function PromptButton(){
+	HidePrompt();
+}
+
+function ShowPrompt(headerText, messageText, color){
+	//Add the header text to the prompt message.
+	document.getElementById("prompt-header").innerHTML = headerText;
+	//Add the message text to the prompt message.
+	document.getElementById("prompt-message").innerHTML = messageText;
+	//Hide the activity.
+	ShowElement("activity",false);
+	//Show the prompt.
+	ShowElement("prompt",true);
+	//Change the background color.
+	document.getElementById("body").style.backgroundColor = color;
+	
+}
+
+function HidePrompt(){
+	//Hide the prompt.
+	ShowElement("prompt",false);
+	//Show the activity.
+	ShowElement("activity",true);
+	//Change the background color.
+	document.getElementById("body").style.backgroundColor = "#ffffff";
+}
+
+function ShowElement(s,b){
+	document.getElementById(s).style.display = (b)? 'inline':'none';
+}
+
+init();
+
+</script>
+
+</body>
+</html>

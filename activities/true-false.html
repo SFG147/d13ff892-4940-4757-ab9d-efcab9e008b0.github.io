@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<style> 
+p,h1,h3,input,button {
+	font-family:Helvetica;
+	font-size:40px;
+	color: #555555;
+}
+h2{
+	font-family:Helvetica;
+	font-size:40px;
+	color: #333;
+}
+
+#result {
+    padding: 20px 20px;
+    margin: 5px 5px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 6px;
+  background-color: #00BDED;
+  font-weight:bold;
+}
+
+button {
+	
+    padding: 20px 20px;
+    margin: 5px 5px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 6px;
+	background-color: #00BDED;
+	font-weight:bold;
+	color:#FFFFFF; 
+}
+
+button:hover {
+	background-color: #0088AB;
+}
+
+/* hide input */
+input.radio:empty {
+	display:none;
+}
+
+/* style label */
+input.radio:empty ~ label {
+	position: relative;
+	float: left;
+	line-height: 2.5em;
+	text-indent: 3.25em;
+	margin-top: 0.5em;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+input.radio:empty ~ label:before {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 2.5em;
+	background: #D1D3D4;
+	border-radius: 10px 0 0 10px;
+}
+
+/* toggle hover */
+input.radio:hover:not(:checked) ~ label:before {
+	content:'\2714';
+	text-indent: .9em;
+	color: #C2C2C2;
+}
+
+input.radio:hover:not(:checked) ~ label {
+	color: #888;
+}
+
+/* toggle on */
+input.radio:checked ~ label:before {
+	content:'\2714';
+	text-indent: .9em;
+	color: #FFFFFF;
+	background-color: #00BDED;
+}
+
+input.radio:checked ~ label {
+	color: #777;
+}
+
+/* radio focus */
+input.radio:focus ~ label:before {
+	box-shadow: 0 0 0 3px #999;
+}
+
+label {
+  	/*width: 200px;*/
+  	border-radius: 10px;
+  	border: 1px solid #D1D3D4;
+	padding-right:40px;
+	margin-left:40px;
+	font-family:Helvetica;
+	font-size:40px;
+	color: #555555;
+}
+
+.choice {
+	
+}
+
+</style>
+
+<body style="padding:10%" onLoad="init()">
+
+<h2>QUESTION OF THE DAY</h2>
+<p>This is a statement that is false. Please select false.
+Select TRUE or FALSE.<br/>
+
+<div style="display:inline-table; width:100%">
+<div class="choice">
+<input type="radio" name="radio" id="radio1" class="radio"/>
+<label for="radio1" id="text1">First Option</label>
+</div>
+
+<div class="choice">
+<input type="radio" name="radio" id="radio2" class="radio"/>
+<label for="radio2" id="text2">Second Option</label>
+</div>
+</div>
+
+</p>
+
+<p align="right">
+<button onclick="checkAnswer()">SUBMIT</button></p>
+
+<div id="result">
+<p id="demo" style="color:#fff" color="#ffffff"></p>
+</div>
+
+<script>
+var answers =["True","False"];
+var blanks = ["radio1","radio2"];
+var texts = ["text1","text2"];
+
+function init(){
+	for(i=0; i<answers.length; i++){
+		document.getElementById(texts[i]).innerHTML = answers[i];
+	}
+}
+
+function checkAnswer() {
+var correct = false;
+var output = "";
+if(document.getElementById("radio2").checked == true){
+	correct = true;
+}
+    if(correct){
+       output  = "Great job! You selected the correct answer!";
+    }else{
+       output  = "Whoops! Please double check your answer. ";
+    }
+    document.getElementById("demo").innerHTML = output ;
+}
+</script>
+
+</body>
+</html>

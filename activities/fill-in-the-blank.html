@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+p,h1,h3,input,button {
+	font-family:Helvetica;
+	font-size:40px;
+	color: #555555;
+}
+h2{
+	font-family:Helvetica;
+	font-size:40px;
+	color: #333;
+}
+#result {
+    padding: 20px 20px;
+    margin: 5px 5px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 6px;
+  background-color: #00BDED;
+  font-weight:bold;
+}
+
+input[type=text] {
+    width: 300px;
+    padding: 10px 15px;
+    margin: 5px 12px;
+    box-sizing: border-box;
+    border: 1px solid #C7C7C7;
+    border-radius: 6px;
+	background-color: #f1f1f1;
+ 
+}
+button {
+	
+    padding: 20px 20px;
+    margin: 5px 5px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 6px;
+	background-color: #00BDED;
+	font-weight:bold;
+	color:#FFFFFF; 
+}
+button:hover {
+	background-color: #0088AB;
+}
+</style>
+</head>
+<body style="padding:10%">
+
+<h2>QUESTION OF THE DAY</h2>
+<p>Fill in the blanks.<br/><br/>
+
+But the fruit of the Spirit is <input type="text" id="txt1" >, <input type="text" id="txt2">, <input type="text" id="txt3">, <input type="text" id="txt4">, <input type="text" id="txt5">, <input type="text" id="txt6">, <input type="text" id="txt7">, <input type="text" id="txt8">, <input type="text" id="txt9">: against such there is no law. <br/><br/><i>- Galatians 5:22-23</i></p> 
+<br/>
+
+<p align="right">
+<button onclick="myFunction()">SUBMIT</button></p>
+
+<div id="result">
+<p id="demo" style="color:#fff" color="#ffffff"></p>
+</div>
+
+<script>
+var answers = ["love","joy","peace","longsuffering","gentleness","goodness","faith","Meekness","temperance"];
+var blanks = ["txt1","txt2","txt3","txt4","txt5","txt6","txt7","txt8","txt9"];
+
+function myFunction() {
+var correct = true;
+var output = "";
+for(i=0; i<9; i++){
+   var x = document.getElementById(blanks[i]).value;
+   var y = answers[i];
+    if(x.toLowerCase().trim(" ") == y.toLowerCase().trim(" ")){
+       
+    }else{
+      correct = false;
+    }
+}
+    if(correct){
+       output  = "Great job! Let's bare all the fruit!";
+    }else{
+       output  = "Whoops! Please double check your answers. ";
+    }
+    document.getElementById("demo").innerHTML = output ;
+}
+</script>
+
+</body>
+</html>
