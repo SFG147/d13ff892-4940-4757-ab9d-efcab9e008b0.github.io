@@ -79,10 +79,10 @@ var home_features = [
         image: "",
         html: '<h1 id="leadTitle">Weekly Services</h1>\
                <p><b>Sunday</b></p>\
-               <p>Sunday School   : 10:00AM-11:00AM </p>\
+               <p>Sunday School   : 10:00AM - 11:00AM </p>\
                <p>Morning Worship : 11:00AM</p>\
                <p><b>Wednesday</b></p>\
-               <p>Bible Study   : 7:00AM-9:00PM </p>\
+               <p>Bible Study   : 7:00PM - 9:00PM </p>\
                '
     },{
         image: "",
