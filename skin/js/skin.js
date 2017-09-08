@@ -73,7 +73,7 @@ var home_features = [
     {
         image: "",
         html: '<h1 id="leadTitle">Welcome</h1>\
-               <center><video controls =""><source src="skin/video/Intro_Video_1.mp4" /></video></center>'
+               <center><video controls =""><source src="skin/video/Intro_Video_2.mp4" /></video></center>'
     },
     {
         image: "",
