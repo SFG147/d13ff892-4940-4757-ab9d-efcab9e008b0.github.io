@@ -1,4 +1,4 @@
-﻿
+
 //TEXT - STRINGS
 
 var app_title = "";
@@ -83,6 +83,13 @@ var home_features = [
                <p>Morning Worship : 11:00AM</p>\
                <p><b>Wednesday</b></p>\
                <p>Bible Study   : 7:00PM - 9:00PM </p>\
+               '
+    },
+    {
+        image: "",
+        html: '<h1 id="leadTitle">Travel Cards</h1>\
+               <img class="headImage" src="skin/img/travel_cards.png" alt="">\
+               <p>Travel with God\'s promises of protection. Visit us and receive a free pocket travel card as our gift to you!</p>\
                '
     },{
         image: "",
