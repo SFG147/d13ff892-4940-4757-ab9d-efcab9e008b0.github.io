@@ -11,7 +11,7 @@ var heading_info = '<img class="headImage" src="skin/img/header_image.svg" alt="
     //'<b><font color="#03edff">32nd Annual</font></b> Triangle Commercial Real Estate Report<br><br>' +
     '<a class="btn btn-default" href="menu.html">CATEGORIES</a>' +
     '<a class="btn btn-default" href="about.html">ABOUT</a>' +
-    '<a class="btn btn-primary btn-large" href="images.html?galNum=8">ANNOUNCEMENTS</a>';
+    '<a class="btn btn-primary btn-large" href="news.html">ANNOUNCEMENTS</a>';
 
 var about_text = "<img class='headImage' src='skin/img/about_image.svg' alt=''>\
 <span>Founded in 19xx, by Evangelist Doris Bethea, Faith and Truth Mission for Jesus Ministry began in a humble home. Since then it has developed into a Spirit-lead organization, focused on growing together in God. With a down-home atmosphere and free-flowing joyful mood, everyone gets an opportunity to praise and glorify God through songs, testimony and more!\
